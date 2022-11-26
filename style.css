@@ -24,6 +24,13 @@ form input {
   border: thin solid #a1a1a1;
   box-sizing: border-box;
 }
+
+.formButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 form button {
   min-width: 100px;
   padding: 10px 20px;
@@ -33,8 +40,27 @@ form button {
   border-radius: 7px;
   cursor: pointer;
   margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }
 
+form button span {
+  border-bottom: thin solid #fff;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 0px;
+  animation: rotate 0.3s infinite linear;
+}
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.hideLoader {
+  display: none;
+}
 
 .animeCards {
   display: flex;

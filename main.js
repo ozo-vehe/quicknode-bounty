@@ -563,11 +563,15 @@ async function uploadNftCard() {
 
 document.querySelector('.createNft').addEventListener("click", async function(e) {
   e.preventDefault()
+	document.querySelector(".createNft .loader").classList.remove("hideLoader")
 	console.log("Create Nft")
   await uploadNftCard()
+	document.querySelector(".createNft .loader").classList.add("hideLoader")
 })
 document.querySelector('.getNft').addEventListener("click", async function(e) {
 	e.preventDefault()
+	document.querySelector(".getNft .loader").classList.remove("hideLoader")
   console.log("Get Nft")
   await getNftCard()
+	document.querySelector(".getNft .loader").classList.add("hideLoader")
 })
